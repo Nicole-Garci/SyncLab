@@ -27,12 +27,21 @@
             <li class="side-navbar-li"><a href="/dashboard/laboratorio" class="side-navbar-link">Laboratórios</a></li>
         </ul>
     </aside>
+    <div id="main-content" class="main-content active">
+
+    </div>
     <script type="text/javascript">
         sidebarIsOpen = true;
         window.onload = () => {
             document.getElementById("sidebar-btn").onclick = ( event => {
                 event.preventDefault();                
-                sidebarIsOpen ? document.getElementById("side-navbar").className = "side-bar active" : document.getElementById("side-navbar").className = "side-bar";                
+                if(!sidebarIsOpen) {
+                    document.getElementById("side-navbar").className = "side-bar active";
+                    document.getElementById("main-content").className = "main-content active";
+                } else {
+                    document.getElementById("side-navbar").className = "side-bar";
+                    document.getElementById("main-content").className = "main-content";
+                }
                 sidebarIsOpen=!sidebarIsOpen;
             });
         };
