@@ -1,0 +1,35 @@
+:root{
+    --cor-principal:#8C52FF;
+    --cor-secundaria:#FFFFFF;
+    --cor-texto-secundaria:#828282;
+    --cor-texto-principal: #000;
+}
+
+.navbar {
+    border-bottom: 2px solid var(--cor-principal);
+}
+
+.navbuttons {
+    justify-content: flex-end;
+}
+
+.dash-nav-option {
+    margin-right: 10px;
+}
+
+.side-bar {
+    width: 20%;
+    background-color: rgba(200,200,200,.3);
+    position: absolute;
+    left: -20%;
+    height: 100%;
+    transition: .4s left ease-out;
+}
+
+.side-bar.active {
+    left: 0;
+}
+
+.side-navbar {
+    margin: 0;
+}

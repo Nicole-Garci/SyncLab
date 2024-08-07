@@ -17,12 +17,11 @@
     position: relative;
     margin: 0px;
     min-height: 100vh;
-    padding-bottom: 15%;
 }
 .navbar{
     display: flex;
     justify-content: space-between;
-    padding: 10px 50px;
+    padding: 10px 0px;
     align-items: center;
 }
 .navlogo{
@@ -178,7 +177,7 @@
     background-color: var(--cor-principal);
     color: var(--cor-secundaria);
     position: absolute;
-    bottom: 0;
+    bottom: -20%;
     left: 0;
     width: 100%;
 }
@@ -211,12 +210,51 @@
     margin: 10px 0px;
 }
 
+.form-section {
+}
+
+.login-form {
+    width: 50%;
+    position: relative;
+    margin-bottom: 10%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.input-box {
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+.input-box:focus {
+    border: 3px solid;
+    border-color: var(--cor-principal);
+}
+
+.label-box {
+    font-size: 1.4em;
+}
+
+.login-btn {
+    position: absolute;
+    right: 0;
+    bottom: -3em;
+    font-size: 1.1em;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-principal);
+    border-radius: 5px;
+    padding: 10px;
+}
+
 @media (max-width: 1000px) {
     .navbuttons{
         width: 50%;
-    }
-    .body-fix {
-        padding-bottom: 20%;
     }
 }
 
@@ -238,9 +276,10 @@
     .introducao{
         width: 70%;
     }
-
-    .body-fix {
-        padding-bottom: 30%;
+    
+    .login-form {
+        width: 80%;
+        margin: 0 auto 20% auto;
     }
 }
 
@@ -265,8 +304,8 @@
         width: 80%;
     }
 
-    .body-fix {
-        padding-bottom: 35%;
+    .login-form {
+        width: 100%;
     }
 }
 
@@ -283,7 +322,8 @@
     .introducao{
         width: 90%;
     }
-    .body-fix {
-        padding-bottom: 60%;
+
+    .login-form {
+        margin: 0 auto 40% auto;
     }
 }
