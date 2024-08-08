@@ -23,33 +23,48 @@
     </nav>
     <aside id="side-navbar" class="side-bar active">
         <ul class="side-navbar">
-            <li class="side-navbar-li active"><a href="/dashboard/index.html" class="side-navbar-link">Dashboard</a></li>
+            <li class="side-navbar-li"><a href="/dashboard/index.html" class="side-navbar-link">Dashboard</a></li>
             <li class="side-navbar-li"><a href="/dashboard/projetos.html" class="side-navbar-link">Projetos</a></li>
-            <li class="side-navbar-li"><a href="/dashboard/requisicoes.html" class="side-navbar-link">Requisições</a></li>
+            <li class="side-navbar-li active"><a href="/dashboard/requisicoes.html" class="side-navbar-link">Requisições</a></li>
             <li class="side-navbar-li"><a href="/dashboard/acoes.html" class="side-navbar-link">Ações</a></li>
             <li class="side-navbar-li"><a href="/dashboard/laboratorio.html" class="side-navbar-link">Laboratórios</a></li>
         </ul>
     </aside>
     <div id="main-content" class="main-content active">
-        <h2>Bem vindo ao Dashboard SyncLab</h2>
-        <div class="cards-container">
-            <div class="card-box">
-                <div class="card-title">
-                    <h3>Projetos</h3>
-                </div>
-                <div class="card-content">
-                    <p>Você está vinculado à 3 projetos no momento! Veja <a href="/dashboard/projetos.html">aqui</a>.</p>
-                </div>
-            </div>
-            <div class="card-box">
-                <div class="card-title">
-                    <h3>Ações</h3>
-                </div>
-                <div class="card-content">
-                    <p>4 atividades estão em aberto, <a href="/dashboard/acoes.html">cheque aqui</a>.</p>
-                </div>
-            </div>
-        </div>
+        <table class="tablecontent">
+            <thead>
+                <tr class="table-row">
+                    <th class="table-head">Nome do Projeto</th>
+                    <th class="table-head">Laboratório</th>
+                    <th class="table-head">Assunto</th>
+                    <th class="table-head">Status</th>
+                    <th class="table-head">Monitorar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-row">
+                    <td class="table-data">Oktoplus - Programação Competitiva</td>
+                    <td class="table-data">Não vinculado</td>
+                    <td class="table-data">Falta de horário para reunião</td>
+                    <td class="table-data">Em andamento</td>
+                    <td class="table-data">svg papel</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-data">Oktoplus - Programação Competitiva</td>
+                    <td class="table-data">Lab 6-209</td>
+                    <td class="table-data">Instalar biblioteca MinGW</td>
+                    <td class="table-data">Concluído</td>
+                    <td class="table-data">svg papel</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-data">PET.COMP</td>
+                    <td class="table-data">Lab 6-115</td>
+                    <td class="table-data">Super lotação</td>
+                    <td class="table-data">Em andamento</td>
+                    <td class="table-data">svg papel</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <script type="text/javascript">
         sidebarIsOpen = true;

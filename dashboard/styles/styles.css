@@ -108,6 +108,10 @@
     background-color: rgba(200,200,200,.3);
 }
 
+.table-head, .table-data {
+    padding: .5em;
+}
+
 .table-row:nth-child(even) {
     background-color: var(--cor-principal);
     color: var(--cor-secundaria);
