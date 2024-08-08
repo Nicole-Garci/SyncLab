@@ -19,7 +19,7 @@
 
 .side-bar {
     width: 20%;
-    background-color: rgba(200,200,200,.3);
+    background-color: rgb(233, 233, 233);
     position: absolute;
     left: -50%;
     height: 100%;
@@ -111,6 +111,10 @@
         width: 75%;
         margin-left: 25%;
     }
+
+    .side-navbar-li {
+        font-size: 1.2em;
+    }
 }
 
 @media (max-width: 600px) {
@@ -125,13 +129,18 @@
         width: 35%;
     }
 
-    .main-content.active {
-        width: 65%;
-        margin-left: 35%;
+    .main-content.active, .main-content {
+        width: 90%;
+        margin: auto;
     }
 
     .side-navbar-li {
         font-size: 1em;
+    }
+    .navbuttons {
+        justify-content: space-between;
+        flex-direction: row;
+        width: 90%;
     }
 }   
 
