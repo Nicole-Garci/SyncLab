@@ -251,6 +251,7 @@
     color: var(--cor-secundaria);
     background-color: var(--cor-principal);
     border-radius: 5px;
+    border-color: var(--cor-principal);
     padding: 10px;
 }
 
