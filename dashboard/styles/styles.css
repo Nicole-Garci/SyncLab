@@ -78,8 +78,19 @@
 .main-content {
     width: 100%;
     padding: 1em;
-    height: 100vh;
+    height: auto;
     transition: .4s width ease-out, .4s margin ease-out;
+    overflow-x: scroll;
+}
+
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.main-content {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .main-content.active {
@@ -108,7 +119,7 @@
     }
 
     .main-content.active {
-        width: 75%;
+        width: 70%;
         margin-left: 25%;
     }
 
