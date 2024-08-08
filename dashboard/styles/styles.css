@@ -46,6 +46,15 @@
     background-color: var(--cor-secundaria);
 }
 
+.side-navbar-li.active>a {
+    color: var(--cor-principal);
+}
+
+.side-navbar-link {
+    text-decoration: none;
+    color: var(--cor-texto-principal);
+}
+
 .logo-container {
     display: flex;
     align-items: center;
