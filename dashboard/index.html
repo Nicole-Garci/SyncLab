@@ -18,7 +18,7 @@
         </div>
         <ul class="navbuttons">
             <li class="dash-nav-option">Victor Borges</li>
-            <li><a href="/login.html"><button class="navlink dash-nav-option botao">logout</button></a></li>
+            <li><a href="/login.html"><button class="navlink dash-nav-option botao">Sair</button></a></li>
         </ul>
     </nav>
     <aside id="side-navbar" class="side-bar active">
@@ -32,16 +32,24 @@
     </aside>
     <div id="main-content" class="main-content active">
         <h2>Bem vindo ao Dashboard SyncLab</h2>
-        <p>Você está vinculado à 3 projetos no momento! Veja <a href="/dashboard/projetos.html">aqui</a>.</p>
-        <p>4 atividades estão em aberto, <a href="/dashboard/acoes.html">cheque aqui</a>.</p>
-        <table class="tablecontent">
-            <tr class="table-row">
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-        </table>
+        <div class="cards-container">
+            <div class="card-box">
+                <div class="card-title">
+                    <h3>Projetos</h3>
+                </div>
+                <div class="card-content">
+                    <p>Você está vinculado à 3 projetos no momento! Veja <a href="/dashboard/projetos.html">aqui</a>.</p>
+                </div>
+            </div>
+            <div class="card-box">
+                <div class="card-title">
+                    <h3>Ações</h3>
+                </div>
+                <div class="card-content">
+                    <p>4 atividades estão em aberto, <a href="/dashboard/acoes.html">cheque aqui</a>.</p>
+                </div>
+            </div>
+        </div>
     </div>
     <script type="text/javascript">
         sidebarIsOpen = true;
