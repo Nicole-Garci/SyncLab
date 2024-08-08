@@ -21,7 +21,7 @@
     width: 20%;
     background-color: rgba(200,200,200,.3);
     position: absolute;
-    left: -20%;
+    left: -50%;
     height: 100%;
     transition: .4s left ease-out;
 }
@@ -46,8 +46,36 @@
     background-color: var(--cor-secundaria);
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.navlogo {
+    width: 100%;
+}
+
+.ampulheta {
+    width: 50%;
+    transition: .4s all ease-out;
+}
+
+.ampulheta.active {
+    transform: rotate(360deg);
+    margin-left: -75%;
+}
+
+.logo-name {
+    transition: .4s all ease-out;
+}
+
+.logo-name.active {
+    opacity: 0;
+    transform: translateX(40%);
+}
+
 .main-content {
-    background-color: black;
     width: 100%;
     height: 100vh;
     transition: .4s width ease-out, .4s margin ease-out;
@@ -56,4 +84,44 @@
 .main-content.active {
     width: 80%;
     margin-left: 20%;
+}
+
+@media (max-width: 1000px) {
+    .side-bar {
+        width: 25%;
+    }
+}
+
+@media (max-width: 600px) {
+    .dash-nav-option {
+        margin-right: 0px;
+    }
+    .logo-container {
+        width: 20%;
+    }
+
+    .side-bar {
+        width: 35%;
+    }
+
+    .side-navbar-li {
+        font-size: 1em;
+    }
+}   
+
+@media (max-width: 600px) {
+    .dash-nav-option {
+        margin-right: 0px;
+    }
+    .logo-container {
+        width: 20%;
+    }
+
+    .side-bar {
+        width: 50%;
+    }
+
+    .side-navbar-li {
+        font-size: .8em;
+    }
 }

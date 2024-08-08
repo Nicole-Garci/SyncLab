@@ -12,7 +12,10 @@
 </head>
 <body class="body-fix">
     <nav class="navbar">
-        <img id="sidebar-btn" alt="logo do SyncLab" src="../images/synclab img.webp" class="navlogo"/>
+        <div id="sidebar-btn" class="logo-container">
+            <img alt="SyncLab" src="../images/logo-nome.png" class="navlogo logo-name"/>
+            <img alt="logo do SyncLab" src="../images/logo-ampulheta.png" class="navlogo ampulheta"/>
+        </div>
         <ul class="navbuttons">
             <li class="dash-nav-option">Victor Borges</li>
             <li><a href="/login.html"><button class="navlink dash-nav-option botao">logout</button></a></li>
@@ -38,9 +41,23 @@
                 if(!sidebarIsOpen) {
                     document.getElementById("side-navbar").className = "side-bar active";
                     document.getElementById("main-content").className = "main-content active";
+                    logoElements = document.getElementsByClassName("navlogo");
+                    let length = logoElements.length;
+                    for(let i=0; i < length; i++) {
+                        element = logoElements[i];
+                        classes = element.className.split(" ");
+                        element.className = "";
+                        for (let j = 0; j < classes.length-1; j++) {
+                            element.className += " "+classes[j];
+                        }
+                    }
                 } else {
                     document.getElementById("side-navbar").className = "side-bar";
                     document.getElementById("main-content").className = "main-content";
+                    logoElements = document.getElementsByClassName("navlogo");
+                    for(i=0; i < logoElements.length; i++) {
+                        logoElements[i].className+= " active";
+                    }
                 }
                 sidebarIsOpen=!sidebarIsOpen;
             });
