@@ -53,6 +53,7 @@
 .side-navbar-link {
     text-decoration: none;
     color: var(--cor-texto-principal);
+    display: block;
 }
 
 .logo-container {
