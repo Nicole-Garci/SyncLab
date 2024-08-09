@@ -218,7 +218,7 @@
 .login-form {
     width: 50%;
     position: relative;
-    margin-bottom: 10%;
+    margin: auto;
 }
 
 .form-group {
