@@ -259,10 +259,8 @@
     color: var(--cor-texto-secundaria);
 }
 
-.sobremais{
+.sobremais {
     text-align: left;
-    margin-left: 20px;
-    margin-right: 50%;
 }
 
 @media (max-width: 1000px) {
