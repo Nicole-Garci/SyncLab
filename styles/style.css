@@ -232,6 +232,7 @@
 .input-box {
     padding: 5px;
     font-size: 1em;
+    border-radius: 5px;
 }
 
 .input-box:focus {
@@ -288,7 +289,7 @@
         width: 70%;
     }
     
-    .login-form {
+    .form {
         width: 80%;
         margin: 0 auto 20% auto;
     }
@@ -315,7 +316,7 @@
         width: 80%;
     }
 
-    .login-form {
+    .form {
         width: 100%;
     }
 }
@@ -334,7 +335,7 @@
         width: 90%;
     }
 
-    .login-form {
+    .form {
         margin: 0 auto 40% auto;
     }
 }
