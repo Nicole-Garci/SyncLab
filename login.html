@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <title>SyncLab - Login</title>
     <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/form.css" type="text/css"/>
 </head>
 <body class="body-fix">
     <nav class="navbar container">
@@ -21,7 +22,7 @@
     </nav>
 
     <section class="form-section container">
-        <form class="login-form" id="login-form">
+        <form class="form" id="login-form">
             <div class="form-group">
                 <label class="label-box">Usuário:</label>
                 <input class="input-box" id="username" type="text" placeholder="Digite seu nome de usuário"/> 
@@ -30,9 +31,7 @@
                 <label class="label-box">Senha:</label>
                 <input class="input-box" id="password" type="password" placeholder="Digite sua senha"/>
             </div>
-            <a href="/dashboard/index.html">
-                <button class="login-btn" type="button">Entrar</button>                
-            </a>
+                <button class="login-btn" type="submit" >Entrar</button>                
         </form>
     </section>
 

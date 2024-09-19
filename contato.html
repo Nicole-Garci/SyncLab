@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <title>SyncLab - Contato</title>
     <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/form.css" type="text/css"/>
 </head>
 <body class="body-fix">
     <nav class="navbar container">
@@ -27,7 +28,7 @@
         </p>
         <br>
         <div class="form-section">
-            <form class="login-form">
+            <form class="form" id="contato-form">
                 <div class="form-group">
                     <label class="label-box">Nome:</label>
                     <input class="input-box" id="nome" type="text" placeholder="Digite o nome pessoa física ou jurídica"/> 
@@ -36,19 +37,17 @@
                     <label class="label-box">Assunto:</label>
                     <select class="input-box" id="assunto">
                         <option value="0">Selecione o assunto</option>
-                        <option value="1">Orçamento</option>
-                        <option value="2">SAC</option>
-                        <option value="3">Marketing</option>
-                        <option value="4">Outro</option>
+                        <option value="Orçamento">Orçamento</option>
+                        <option value="SAC">SAC</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Outro">Outro</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label class="label-box">Comentário:</label>
                     <textarea class="input-box" id="comentario" style="resize: none;" maxlength="1000" rows="8" cols="50" type="text-area" placeholder="Digite um texto breve sobre o assunto."> </textarea> 
                 </div>
-                <a href="/contato.html">
-                    <button class="login-btn" type="button">Enviar</button>                
-                </a>
+                <button class="login-btn" type="submit">Enviar</button>                
             </form>
     </section>
 
@@ -68,6 +67,8 @@
             </div>
         </div>
     </footer>
+
+    <script type="module" text="javascript" src="./js/Controllers/Contato.js"></script>
 
 </body>
 </html>

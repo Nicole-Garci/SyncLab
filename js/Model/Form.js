@@ -7,36 +7,32 @@ export default class Form {
     }
 
     _init() {
-        console.log("AQUI!");
-        for(let i in this.fields) {
-            console.log(i);
+
+        for (let i in this.fields) {
             this.buildField(i);
-        }    
-    
+        }
+
+        if (this.id) {
+            document.getElementById(this.id).addEventListener("submit", e => {
+                e.preventDefault();
+                if (this.noError() && this.onSubmit) {
+                    this.onSubmit(e);
+                }
+            })
+        }
+
     }
 
     buildField(index) {
 
         let input = document.getElementById(this.fields[index].id);
+        this.fields[index].className = input.className
         this.fields[index].errors = {};
         let formGroup = input.parentElement;
 
         formGroup.append(this._buildErrorDiv(index));
         input.addEventListener("input", e => {
-            let validators = this.fields[index].validators;
-            for(let i in validators) {
-                if(!validators[i].validate(input.value)) {
-                    console.log(validators[i]);
-                    this.fields[index].errors[i] = validators[i].message;
-                } else {
-                    this.fields[index].errors[i] = null
-                }
-            }
-
-            console.log(this.fields[index].errors)
-
-            this._buildErrors("error-div-"+index, this.fields[index].errors);
-
+            this.validateInput(input, index)
         });
 
     }
@@ -61,14 +57,36 @@ export default class Form {
         }
     }
 
-
-    onSubmit(e) {
-
-
-
-        if(this.onSubmit) {
-            this.onSubmit(e);
+    validateInput(input, index) {
+        let validators = this.fields[index].validators;
+        for (let i in validators) {
+            if (!validators[i].validate(input.value)) {
+                this.fields[index].errors[i] = validators[i].message;
+            } else {
+                delete this.fields[index].errors[i]
+            }
         }
+        
+        if(Object.entries(this.fields[index].errors).length > 0) {
+            // colocar input error class
+            input.className = this.fields[index].className  + ' error'
+        } else {
+            // remover input error class
+            input.className = this.fields[index].className  + ' success'
+        }
+
+        this._buildErrors("error-div-"+index, this.fields[index].errors);
+    }
+
+    noError() {
+        let c = true
+        for (let i in this.fields) {
+            this.validateInput(document.getElementById(this.fields[i].id), i)
+            if (Object.entries(this.fields[i].errors).length > 0)
+                c = false;
+        }
+
+        return c
     }
 
 }

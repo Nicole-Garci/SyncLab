@@ -1,13 +1,13 @@
 import Validator from "./Validator.js";
 
 export default class ValidatorStrMinLen extends Validator {
-    constructor(minLen, message) {
+    constructor(maxLen, message) {
         super();
-        this.minLen = minLen;
+        this.maxLen = maxLen;
         this.message = message;
     }
 
     validate(fieldValue) {
-        return fieldValue.length >= this.minLen
+        return fieldValue.length <= this.maxLen
     }
 }

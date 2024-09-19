@@ -1,6 +1,7 @@
 import Form from '../Model/Form.js';
 import ValidatorRegex from '../Validators/ValidatorRegex.js'
 import ValidatorStrMinLen from '../Validators/ValidatorStrMinLen.js';
+import ValidatorRequired from '../Validators/ValidatorRequired.js';
 
 window.onload = () => {
     let formData = {
@@ -9,20 +10,23 @@ window.onload = () => {
             {
                 id: 'username',
                 validators: [
-                    new ValidatorRegex(/\w+/, "Deve possuir apenas letras minúsculas e maiúsculas sem acento!"),
-                    new ValidatorStrMinLen(3, "Deve possuir ao menos 3 letras")
+                    new ValidatorRegex(/^\w+$/, "Deve possuir apenas letras minúsculas e maiúsculas sem acento!"),
+                    new ValidatorStrMinLen(3, "Deve possuir ao menos 3 caracteres"),
+                    new ValidatorRequired('Este campo é obrigatório')
                 ]
             },
             {
                 id: 'password',
                 validators: [
-                    new ValidatorRegex(/\w+/, "Deve possuir apenas letras minúsculas e maiúsculas sem acento!")
+                    new ValidatorRegex(/^\w+$/, "Deve possuir apenas letras minúsculas e maiúsculas sem acento!"),
+                    new ValidatorStrMinLen(6, "Deve possuir ao menos 6 caracteres"),
+                    new ValidatorRequired('Este campo é obrigatório')
                 ]
             }
         ],
         onSubmit: e => {
             e.preventDefault();
-            console.log("AQUI!");
+            window.location.href = '/dashboard'
         }
     }
 
